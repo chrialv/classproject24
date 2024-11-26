@@ -27,7 +27,7 @@ export function Signup(props) {
     const includesNumbers = () => {
         const numbersArray = reqNumbers.split("")
         let result = false
-        numbersArray.forEach((Number) => {
+        numbersArray.forEach((number) => {
             if (password.includes(number)) {
                 result = true
             }

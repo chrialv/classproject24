@@ -67,7 +67,7 @@ export function Home(props) {
         <Container fluid>
             <Row>
                 <Col>
-                    <h1>Library System</h1>
+                    <h1>Library Management System</h1>
                 </Col>
             </Row>
             <Row>

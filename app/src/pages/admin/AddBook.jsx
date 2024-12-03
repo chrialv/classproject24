@@ -7,15 +7,23 @@ import Alert from "react-bootstrap/Alert";
 
 import { collection, addDoc } from "firebase/firestore";
 import { FirestoreContext } from "../../contexts/FirestoreContext";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"
 
-export function AddBook( props ) {
+export function AddBook(props) {
     const [ show, setShow ] = useState( false )
     const [ message, setMessage ] = useState('')
 
     let alertType = "success"
 
     const db = useContext( FirestoreContext )
+    const navigate = useNavigate()
+
+    useEffect( () => {
+        if( props.mode == false ) {
+            navigate("/signin")
+        }
+    }, [props.mode])
 
     const createBook = async (event) => {
         event.preventDefault()

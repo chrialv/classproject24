@@ -6,8 +6,8 @@ export function Footer( props ) {
     return(
         <Container fluid>
             <Row>
-                <Col>
-                    <h5>Footer</h5>
+                <Col className="container text-center">
+                    <h4>&copy; 2024 Christian Alvarez. All rights reserved.</h4>
                 </Col>
             </Row>
         </Container>
